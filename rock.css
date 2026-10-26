@@ -40,6 +40,22 @@ button:hover{
     transition: .5s;
 }
 
+#UI{
+    display: flex;
+    justify-content: space-around;
+}
+
+#UI div{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#UI div img{
+    width: 100%;
+}
+
 @media (min-width: 1000px) {
     button{
         font-size: 1.7vw;
