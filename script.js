@@ -18,6 +18,7 @@ function rock() {
         console.log("You Tied.")
         tie += 1
     }
+    scoreUpdate();
 }
 
 function paper() {
@@ -35,6 +36,7 @@ function paper() {
         console.log("You Tied.")
         tie + 1
     }
+    scoreUpdate();
 }
 
 function scissors(){
@@ -50,8 +52,9 @@ function scissors(){
     }
     else{
         console.log("You Tied.")
-        tie += 1
+        tie += 1  
     }
+    scoreUpdate();
 }
 
 function ai(){
@@ -65,7 +68,7 @@ function scoreUpdate(){
     let tiedElem = document.getElementById("tie");
 
     if (playerElem) playerElem.textContent = playerScore;
-    if (compElem) playerElem.textContent = computerScore;
-    if (tiedElem) playerElem.textContent = tie;
+    if (compElem) compElem.textContent = computerScore;
+    if (tiedElem) tiedElem.textContent = tie;
 }
 scoreUpdate();
