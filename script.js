@@ -1,7 +1,7 @@
 //console.log("Hello world")
-let playerScore = 0;
-let computerScore = 0;
-let tie = 0;
+var playerScore = 0;
+var computerScore = 0;
+var tie = 0;
 
 function rock() {
     let userinput = 2
@@ -54,9 +54,18 @@ function scissors(){
     }
 }
 
-
-
 function ai(){
     let random = Math.floor(Math.random() * 3 )+ 1;
     return random;
 }
+
+function scoreUpdate(){
+    let playerElem = document.getElementById("playerscore");
+    let compElem = document.getElementById("comp");
+    let tiedElem = document.getElementById("tie");
+
+    if (playerElem) playerElem.textContent = playerScore;
+    if (compElem) playerElem.textContent = computerScore;
+    if (tiedElem) playerElem.textContent = tie;
+}
+scoreUpdate();
