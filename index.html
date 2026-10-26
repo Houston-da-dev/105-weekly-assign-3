@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <link rel="stylesheet" href="rock.css">
     </head>
     <body>
         <header>
@@ -11,9 +12,25 @@
         </header>
         <section>
             <h2>Choose your weapon!</h2>
-            <button onclick="Rock()">Rock</button>
-            <button onclick="Paper()">Paper</button>
-            <button onclick="Sissors()">Sissors</button>
+            <button onclick="rock()">Rock</button>
+            <button onclick="paper()">Paper</button>
+            <button onclick="sissors()">Sissors</button>
         </section>
+        <div id="UI">
+            <div class="flexitem" id="player">
+                <img src="" alt="">
+            </div>
+            <div class="flexitem">
+                <h3>VS.</h3>
+            </div>
+            <div class="flexitem" id="computer">
+                <img src="" alt="">
+            </div>
+        </div>
+        <h1 id="score"><span id="playscore">0</span> Yours - <span id="tie">0</span> Tie - <span id="comp">0</span> Computers</h1>
+        <footer id="gamelog">
+
+        </footer>
+        <script src="script.js"></script>
     </body>
 </html>
