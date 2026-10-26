@@ -57,7 +57,7 @@ function paper() {
     }
     else if(userinput === computerinput){
         console.log("You Tied.")
-        tie + 1;
+        tie += 1;
         const compimg = document.getElementById("compimg");
         compimg.src = images[0];
     }
