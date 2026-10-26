@@ -16,7 +16,7 @@ h1{
 }
 
 h2{
-    font-size: 5vw;
+    font-size: 4vw;
 }
 
 h3{
@@ -42,11 +42,14 @@ button:hover{
 
 #UI{
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    width: 80%;
+    margin: 20px auto;
 }
 
 #UI div{
-    width: 30%;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,10 +57,14 @@ button:hover{
 
 #UI div img{
     width: 100%;
+    max-width: 300px;
 }
 
 @media (min-width: 1000px) {
     button{
         font-size: 1.7vw;
+    }
+    #UI{
+        flex-direction: row;
     }
 }

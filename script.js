@@ -6,7 +6,8 @@ function changePhoto() {
 }
 
 changePhoto();
-//console.log("Hello world")
+
+
 var playerScore = 0;
 var computerScore = 0;
 var tie = 0;
@@ -14,17 +15,25 @@ var tie = 0;
 function rock() {
     let userinput = 2
     let computerinput = ai();
+    const playerimg = document.getElementById("playerimg");
+    playerimg.src = images[1];
     if(userinput < computerinput){
         console.log("You Lose!");
-        computerScore += 1
+        computerScore += 1;
+        const compimg = document.getElementById("compimg");
+        compimg.src = images[0];
     }
-    if (userinput > computerinput){
+    else if(userinput > computerinput){
         console.log("You Win!")
-        playerScore += 1
+        playerScore += 1;
+        const compimg = document.getElementById("compimg");
+        compimg.src = images[2];
     }
     else{
         console.log("You Tied.")
-        tie += 1
+        tie += 1;
+        const compimg = document.getElementById("compimg");
+        compimg.src = images[1];
     }
     scoreUpdate();
 }
@@ -32,35 +41,51 @@ function rock() {
 function paper() {
     let userinput = 2
     let computerinput = ai()
+    const playerimg = document.getElementById("playerimg");
+    playerimg.src = images[0];
     if(userinput < computerinput){
         console.log("You Lose!");
-        computerScore += 1
+        computerScore += 1;
+        const compimg = document.getElementById("compimg");
+        compimg.src = images[2];
     }
-    if (userinput > computerinput){
+    else if(userinput > computerinput){
         console.log("You Win!")
-        playerScore += 1
+        playerScore += 1;
+        const compimg = document.getElementById("compimg");
+        compimg.src = images[1];
     }
-    else{
+    else if(userinput === computerinput){
         console.log("You Tied.")
-        tie + 1
+        tie += 1;
+        const compimg = document.getElementById("compimg");
+        compimg.src = images[0];
     }
     scoreUpdate();
 }
 
 function scissors(){
-     let userinput = 2
+    let userinput = 2
     let computerinput = ai()
+    const playerimg = document.getElementById("playerimg");
+    playerimg.src = images[2];
     if(userinput < computerinput){
         console.log("You Lose!");
-        computerScore += 1
+        computerScore += 1;
+        const compimg = document.getElementById("compimg");
+        compimg.src = images[1];
     }
-    if (userinput > computerinput){
+    else if (userinput > computerinput){
         console.log("You Win!")
-        playerScore += 1
+        playerScore += 1;
+        const compimg = document.getElementById("compimg");
+        compimg.src = images[0];
     }
     else{
         console.log("You Tied.")
-        tie += 1  
+        tie += 1;
+        const compimg = document.getElementById("compimg");
+        compimg.src = images[2];
     }
     scoreUpdate();
 }
