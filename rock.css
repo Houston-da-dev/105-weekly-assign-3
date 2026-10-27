@@ -58,6 +58,7 @@ button:hover{
 #UI div img{
     width: 100%;
     max-width: 300px;
+    border-radius: 20px;
 }
 
 @media (min-width: 1000px) {
